@@ -8,7 +8,10 @@ A high-performance command-line tool written in C++ to parse, filter, and analyz
 - **Clean Reports:** Generates a beautifully structured `report.txt` ignoring empty error categories.
 
 #How to compile🛠️
+
 g++ log-file-analyzer.cpp -o log-file-analyzer
+
 #How to run💨
+
 ./log-file-analyzer     (linux)
 log-file-analyzer.exe   (Windows)
