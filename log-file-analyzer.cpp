@@ -29,27 +29,27 @@ int main(){
     cout<<"Here is the Report:"<<endl<<endl;
     string line;
     while(getline(output,line)){
-        if(line.find("ERROR") != string::npos){
+        if(line.find("ERROR") != string::npos || line.find("Error") != string::npos){
             errorV.push_back(line);
             error++;
         }
         //warnings
-        if(line.find("WARN") != string::npos){
+        if(line.find("WARN") != string::npos || line.find("Warn") != string::npos){
             warnV.push_back(line);
             warn++;
         }
         //fails
-        if(line.find("FAILED") != string::npos){
+        if(line.find("FAILED") != string::npos || line.find("Failed") != string::npos ){
             failV.push_back(line);
             fail++;
         }
         //critical
-        if(line.find("CRITICAL") != string::npos){
+        if(line.find("CRITICAL") != string::npos || line.find("Critical") != string::npos){
             criticalV.push_back(line);
             critical++;
         }
         //UNauthrized
-        if(line.find("UNAUTHORIZED") != string::npos){
+        if(line.find("UNAUTHORIZED") != string::npos || line.find("Unauthorized") != string::npos){
             unV.push_back(line);
             un++;
         }
