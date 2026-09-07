@@ -39,19 +39,19 @@ int main(){
             logData["ERROR"].push_back(line);
         }
         //warnings
-        if(buffer.find("WARN") != string::npos){
+        else if(buffer.find("WARN") != string::npos){
             logData["WARN"].push_back(line);
         }
         //fails
-        if(buffer.find("FAILED") != string::npos){
+        else if(buffer.find("FAILED") != string::npos){
             logData["FAILED"].push_back(line);
         }
         //critical
-        if(buffer.find("CRITICAL") != string::npos){
+        else if(buffer.find("CRITICAL") != string::npos){
             logData["CRITICAL"].push_back(line);
         }
         //Unauthorized
-        if(buffer.find("UNAUTHORIZED") != string::npos){
+        else if(buffer.find("UNAUTHORIZED") != string::npos){
             logData["UNAUTHORIZED"].push_back(line);
         }
     }
