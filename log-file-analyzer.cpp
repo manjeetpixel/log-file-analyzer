@@ -14,7 +14,8 @@ int main(){
     {"WARN", "\e[33m"},
     {"FAILED", "\e[35m"},
     {"CRITICAL", "\e[34m"},
-    {"UNAUTHORIZED", "\e[36m"}
+    {"UNAUTHORIZED", "\e[36m"},
+    {"DEBUG", "\e[38;5;208m"}
     };
     cout<<"Enter file name: ";
     string file;
@@ -53,6 +54,10 @@ int main(){
         //Unauthorized
         else if(buffer.find("UNAUTHORIZED") != string::npos){
             logData["UNAUTHORIZED"].push_back(line);
+        }
+        // DEBUG
+        else if(buffer.find("DEBUG") != string::npos){
+            logData["DEBUG"].push_back(line);
         }
     }
     // Reporting logData
